@@ -25,4 +25,17 @@ public class Cuenta {
     public void consignar(float cantidad){
         saldo = saldo + cantidad;
     }
+    public void retirar(float cantidad) {
+        float nuevoSaldoTemporal = saldo - cantidad;
+        // saldo = 10000
+        //cant = 2000
+        // 8000 positivo
+        //retirar cant = 8001
+        // -1
+        if (nuevoSaldoTemporal >= 0) {
+            saldo = saldo - cantidad;
+        }else{
+            System.out.println("Saldo insuficiente, tu saldo actual es: " + saldo);
+        }
+    }
 }
