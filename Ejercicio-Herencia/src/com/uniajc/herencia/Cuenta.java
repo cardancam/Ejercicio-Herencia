@@ -22,4 +22,7 @@ public class Cuenta {
         System.out.println("Tasa Anual: " + tasaAnual);
         System.out.println("Comision: " + comisionMensual);
     }
+    public void consignar(float cantidad){
+        saldo = saldo + cantidad;
+    }
 }
