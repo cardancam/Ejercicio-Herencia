@@ -24,14 +24,26 @@ public class Cuenta {
     }
     public void consignar(float cantidad){
         saldo = saldo + cantidad;
+        numConsignaciones++;
     }
     public void retirar(float cantidad) {
         float nuevoSaldoTemporal = saldo - cantidad;
         if (nuevoSaldoTemporal >= 0) {
             saldo = saldo - cantidad;
-        }else{
+            numRetiros++;
+            if (numRetiros > 4) {
+                saldo -= 1000;
+            }
+        } else {
             System.out.println("Saldo insuficiente, tu saldo actual es: " + saldo);
         }
     }
-        
+    public double calcularInteres(float tasaAnual){
+        if (numRetiros> 4) {
+            
+        } else {
+            
+        }
+        return(comisionMensual);
+    }    
 }

@@ -17,7 +17,12 @@ public class EjercicioHerencia {
         System.out.println("");
         cuenta1.imprimir();
         
-        cuenta1.retirar(15000);
+        cuenta1.retirar(5000);
+        cuenta1.retirar(1000);
+        cuenta1.retirar(2000);
+        cuenta1.retirar(1000);
+        System.out.println("");
+        cuenta1.imprimir();
     }
     
 }
